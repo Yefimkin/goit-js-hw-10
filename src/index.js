@@ -13,8 +13,8 @@ const refs = {
     
 refs.searchBox.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY))
 
-function onSearch(e) {
-    e.preventDefault();
+function onSearch(event) {
+    event.preventDefault();
 
     const inputText = refs.searchBox.value.trim();
     refs.countryList.innerHTML = "";
@@ -58,7 +58,7 @@ function onSearch(e) {
 
         refs.countryInfo.insertAdjacentHTML('beforeend', markupInfo);
         }
-        return refs.countryList.insertAdjacentHTML('beforeend', markupData);
+        refs.countryList.insertAdjacentHTML('beforeend', markupData);
         }
 
     }
